@@ -1,0 +1,54 @@
+.btn {
+    width: auto;
+    background-color: darkgray;
+    border: none;
+    font-size: 14px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-left: 2%;
+    color: black;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.a-link {
+    margin-right: 3%;
+}
+
+.icon {
+    width: 45px;
+}
+
+.div {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.icon-skills {
+    margin: 0;
+}
+
+.titulo {
+    margin: 0;
+}
+
+.texto {
+    text-align: justify;
+    font-size: 16px;
+    margin-top: 10px;
+}
