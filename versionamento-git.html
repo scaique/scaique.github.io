@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versionamento com Git</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div>
+        <nav class="navbar">
+            <input class="btn" type="button" value="Inicio" onclick="pagina('index')">
+            <input class="btn" type="button" value="Projetos" onclick="pagina('projetos')">
+            <input class="btn" type="button" value="Links" onclick="pagina('links')">
+        </nav>
+    </div>
+    <div>
+        <h1>Versionamento de Código com Git e GitHub</h1>
+        <p class="texto">Este projeto tem como objetivo fornecer uma referência rápida e fácil de usar para os comandos essenciais do Git. Ele inclui comandos para todas as tarefas básicas de controle de versão, como:</p>
+        <ul>
+            <li>Configuração inicial do Git</li>
+            <li>Criação e gerenciamento de repositórios</li>
+            <li>Adição, remoção e modificação de arquivos</li>
+            <li>Commits e histórico de versões</li>
+            <li>Ramificações e mesclagem</li>
+            <li>Trabalho em equipe e colaboração</li>
+        </ul><br>
+
+        <h2>📚 Documentação</h2>
+        <ul>
+            <li><img src="https://skillicons.dev/icons?i=git" width="18px"><a href="https://git-scm.com/doc">Documentação Git</a></li>
+            <li><img src="https://skillicons.dev/icons?i=github" width="18px"><a href="https://docs.github.com/">Documentação GitHub</a></li>
+        </ul><br>
+
+        <h2>🔗 Link do repositório</h2>
+            <ul>
+                <li><a href="https://github.com/scaique/VersionamentoDeCodigoGit/blob/main/README.md">GitHub</a></li>
+            </ul><br>
+
+        <h3>Configuração do Git</h3>
+        <div class="terminal">
+            <pre><code>git config --global user.email {email}      # Definir/Alterar email <br>git config --global user.nome {nome}        # Definir/Alterar nome <br>git config --global core.longpaths true     # Definir/Alterar tamanho de diretórios
+            </code></pre>
+        </div><br><br>
+
+        <h3>Primeiro commit</h3>
+        <div class="terminal">
+            <pre><code>git init                                    # Inicializa um novo repositório local <br>git add . ou {nome do arquivo}              # Adiciona arquivos modificados ao palco <br>git commit -m "mensagem"                    # Realiza o commit dos arquivos modificados <br>git branch -m {nome da branch}              # Renomear a branch atual <br>git remote add origin {link do repositório} # Adiciona o link do repositório remoto ao repositório local <br>git push -u origin {nome da branch}         # Realiza o primeiro envio envio das modificações
+            </code></pre>
+        </div><br><br>
+
+        <h3>Remoção</h3>
+        <div class="terminal">
+            <pre><code>git rm -r --cached {nome da pasta}  # Remove a pasta e seus arquivos <br>git rm --cached {nome do arquivo}   # Remove o arquivo <br>rm -r .git/                         # Remove o repositório local</code></pre>
+        </div><br><br>
+
+        <h3>Ignorar pastas ou arquivos</h3>
+        <div class="terminal">
+            <pre><code>touch .gitignore                            # Cria o arquivo .gitignore <br>echo "{nome do arquivo}" >> .gitignore      # Adiciona o arquivo ao .gitignore <br>echo "{nome da pasta/}" >> .gitignore       # Adiciona a pasta ao .gitignore</code></pre>
+        </div><br><br>
+
+        <h3>Comandos importantes do git</h3>
+        <div class="terminal">
+            <pre><code>git restore nomeDoArquivo                                                   # Restaura o arquivo do commit <br>### <br>git commit --amend -m "mensagem"                                            # Realiza mudança na mensagem do commit <br>### <br>git log                                                                     # Lista todos os commits <br>git reset --soft {codigo do commit}                                         # Retorna ao commit anterior <br>### <br>git reset . ou {nomeDoArquivo}                                              # Remove o arquivo do commit <br>git restore --staged {nomeDoArquivo}                                        # Restaura o arquivo do commit <br>### <br>git clone {link do repositório} --branch {nome da branch} --single-branch   # Clonar branch de um repositório especifico <br>### <br>git diff --staged                                                           # Lista as alterações que serão incluídas no próximo commit <br>### <br>git commit -sm "mensagem"                                                   # Realiza o commit com sua assinatura <br>git commit -s                                                               # Realiza o commit com sua assinatura sem uma mensagem</code></pre>
+        </div>
+
+        <h3>Puxando alterações</h3>
+        <div class="terminal">
+            <pre><code>git pull</code></pre>
+        </div><br><br>
+
+        <h3>Branches</h3>
+        <div class="terminal">
+            <pre><code>git branch -v                                       # Lista todos os commits de cada branch <br>git branch                                          # Lista todas as branches <br>git branch {nome da nova branch}                    # Cria a nova branch <br>git checkout {nome da branch}                       # Muda para a branch <br>git checkout -b {nome da nova branch}               # Muda para a nova branch <br>git branch -d {nome da branch}                      # Remove a branch <br>git merge {nome da outra branch}                    # Mescla as branches <br>git diff {nome da branch} {nome da outra branch}    # Visualiza as diferenças entre as branches. Exemplo: git diff main origin/main</code></pre>
+        </div><br><br>
+
+        <h3>Tags</h3>
+        <div class="terminal">
+            <pre><code>git tag                                     # Lista todas as tags <br>git tag -a {nome da tag} -m "mensagem"      # Cria uma nova tag <br>git tag -d {nome da tag}                    # Remove a tag</code></pre>
+        </div><br><br>
+
+        <h2>🔍 Referências</h2>
+        <ul>
+            <li><a href="https://git-scm.com/docs/">Git - Reference</a></li>
+            <li><a href="https://wwwdio.me/">Digital Innovation One</a></li>
+        </ul>
+    </div>
+
+    <script src="/static/main.js"></script>
+</body>
+</html>
