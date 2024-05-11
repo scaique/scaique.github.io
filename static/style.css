@@ -27,7 +27,7 @@ body {
     padding: 10px;
 }
 
-.links {
+.links .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -40,6 +40,10 @@ body {
 
 .icon {
     width: 45px;
+}
+
+.icon-skills {
+    width: 25px;
 }
 
 .titulo {
