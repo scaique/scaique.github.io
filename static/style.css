@@ -33,7 +33,7 @@ body {
     justify-content: flex-start;
 }
 
-.a-link {
+.a-link .icon {
     margin-right: 2%;
     margin-left: 0;
 }
