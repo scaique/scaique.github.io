@@ -90,3 +90,43 @@ pre code {
     list-style-type: none;
     padding: 0;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #121212;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    background-color: #212121;
+    border: 1px solid #ddd;
+}
+
+/* projetos.html */
+label {
+    display: block;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    font-size: 16px;
+    margin: 0;
+}
+
+input[type="radio"]:checked + .radio-custom::after {
+    content: " ✓";
+}
+
+input[type="radio"]:checked + .radio-custom {
+    font-size: 16px;
+    text-decoration: underline;
+}
