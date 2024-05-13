@@ -113,6 +113,11 @@ th {
     text-align: left;
 }
 
+th:hover {
+    background-color: #151515;
+    cursor: pointer;
+}
+
 td {
     background-color: #212121;
     border: 1px solid #ddd;
@@ -129,6 +134,7 @@ table tbody tr:hover td {
 /* Seleção para Lista ou Tabela */
 label {
     display: block;
+    width: fit-content;
 }
 
 input[type="radio"] {
