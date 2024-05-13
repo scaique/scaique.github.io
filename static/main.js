@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function() {
             <td>Confront Space Mobile</td>
             <td>Unity Engine</td>
             <td>
-                <a target="_blank" href="https://gamejolt.com/games/confrontspacemobile/500906/" class="texto-link">-GameJolt</a><br>
-                <a target="_blank" href="https://blue-games-oficial.itch.io/confront-space-mobile/" class="texto-link">-Itch.io</a>
+                <a target="_blank" href="https://gamejolt.com/games/confrontspacemobile/500906/" class="texto-link">- GameJolt</a><br>
+                <a target="_blank" href="https://blue-games-oficial.itch.io/confront-space-mobile/" class="texto-link">- Itch.io</a>
             </td>
         </tr>
         <tr>
