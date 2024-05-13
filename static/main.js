@@ -57,53 +57,57 @@ document.addEventListener("DOMContentLoaded", function() {
 </ul>`;
 
     const conteudo2 = `<table>
-    <tr>
-        <th>Nome</th>
-        <th>IDE/Engine</th>
-        <th>Link</th>
-    </tr>
-    <tr>
-        <td>Confront Space</td>
-        <td>GameMaker Studio</td>
-        <td><a target="_blank" href="https://blue-games-oficial.itch.io/confront-space/" class="texto-link">Itch.io</a></td>
-    </tr>
-    <tr>
-        <td>Confront Space Mobile</td>
-        <td>Unity Engine</td>
-        <td>
-            <a target="_blank" href="https://gamejolt.com/games/confrontspacemobile/500906/" class="texto-link">-GameJolt</a><br>
-            <a target="_blank" href="https://blue-games-oficial.itch.io/confront-space-mobile/" class="texto-link">-Itch.io</a>
-        </td>
-    </tr>
-    <tr>
-        <td>Faculdade DevWeb</td>
-        <td>VSCode</td>
-        <td><a target="_blank" href="https://github.com/scaique/Faculdade_DevWeb/" class="texto-link">GitHub</a></td>
-    </tr>
-    <tr>
-        <td>Versionamento de Código</td>
-        <td>IDX Project</td>
-        <td><a target="_blank" href="https://github.com/scaique/VersionamentoDeCodigoGit/" class="texto-link">GitHub</a></td>
-    </tr>
-    <tr>
-        <td>to-do list (Spring Web)</td>
-        <td>IntelliJ IDEA</td>
-        <td><a target="_blank" href="https://github.com/scaique/Rocketseat_Java_ToDoList/" class="texto-link">GitHub</a>
-        </td>
-    </tr>
-    <tr>
-        <td>Intensivão de Python</td>
-        <td>PyCharm</td>
-        <td><a target="_blank" href="https://github.com/scaique/IntensivaoPython/" class="texto-link">GitHub</a></td>
-    </tr>
-    <tr>
-        <td>Intensivão de JavaScript</td>
-        <td>VS Code</td>
-        <td>
-            <a target="_blank" href="https://github.com/scaique/IntensivaoJavaScript/" class="texto-link">-GitHub</a><br>
-            <a target="_blank" href="https://scaique.github.io/IntensivaoJavaScript/" class="texto-link">- GitHub Pages</a>
-        </td>
-    </tr>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>IDE/Engine</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Confront Space</td>
+            <td>GameMaker Studio</td>
+            <td><a target="_blank" href="https://blue-games-oficial.itch.io/confront-space/" class="texto-link">Itch.io</a></td>
+        </tr>
+        <tr>
+            <td>Confront Space Mobile</td>
+            <td>Unity Engine</td>
+            <td>
+                <a target="_blank" href="https://gamejolt.com/games/confrontspacemobile/500906/" class="texto-link">-GameJolt</a><br>
+                <a target="_blank" href="https://blue-games-oficial.itch.io/confront-space-mobile/" class="texto-link">-Itch.io</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Faculdade DevWeb</td>
+            <td>VSCode</td>
+            <td><a target="_blank" href="https://github.com/scaique/Faculdade_DevWeb/" class="texto-link">GitHub</a></td>
+        </tr>
+        <tr>
+            <td>Versionamento de Código</td>
+            <td>IDX Project</td>
+            <td><a target="_blank" href="https://github.com/scaique/VersionamentoDeCodigoGit/" class="texto-link">GitHub</a></td>
+        </tr>
+        <tr>
+            <td>to-do list (Spring Web)</td>
+            <td>IntelliJ IDEA</td>
+            <td><a target="_blank" href="https://github.com/scaique/Rocketseat_Java_ToDoList/" class="texto-link">GitHub</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Intensivão de Python</td>
+            <td>PyCharm</td>
+            <td><a target="_blank" href="https://github.com/scaique/IntensivaoPython/" class="texto-link">GitHub</a></td>
+        </tr>
+        <tr>
+            <td>Intensivão de JavaScript</td>
+            <td>VS Code</td>
+            <td>
+                <a target="_blank" href="https://github.com/scaique/IntensivaoJavaScript/" class="texto-link">- GitHub</a><br>
+                <a target="_blank" href="https://scaique.github.io/IntensivaoJavaScript/" class="texto-link">- GitHub Pages</a>
+            </td>
+        </tr>
+    </tbody>
 </table>`;
 
     radioButtons.forEach(function(radioButton) {

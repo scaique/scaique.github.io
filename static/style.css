@@ -1,8 +1,16 @@
+/* Corpo de todas as páginas */
 body {
     font-family: monospace;
     background-color: #292929;
     color: #ffffff;
     padding: 20px;
+}
+
+/* Botões e barra navegação */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 30px;
 }
 
 .btn {
@@ -21,31 +29,30 @@ body {
     background-color: gray;
 }
 
-.navbar {
-    display: flex;
-    justify-content: flex-start;
-    padding-bottom: 30px;
-}
-
+/* Alinhamento das div dos links e das skills */
 .links .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
+/* Alinhamento das imagens dos links e das skills */
 .a-link .icon {
     margin-right: 2%;
     margin-left: 0;
 }
 
+/* Tamanho das imagens dos links */
 .icon {
     width: 45px;
 }
 
+/* Tamanho das imagens das skills */
 .icon-skills {
     width: 25px;
 }
 
+/* Título e texto */
 .titulo {
     margin: 0;
 }
@@ -56,7 +63,7 @@ body {
     margin-top: 10px;
 }
 
-
+/* "Terminal" da pagina versionamento-git.html */
 .terminal {
     border-radius: 5px;
     background-color: #222222;
@@ -71,6 +78,7 @@ pre code {
     padding: 0;
 }
 
+/* Links */
 .texto-link {
     color: #007bff;
     text-decoration: none;
@@ -86,11 +94,13 @@ pre code {
     color: #007bff;
 }
 
+/* Lista */
 .lista {
     list-style-type: none;
     padding: 0;
 }
 
+/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -108,7 +118,15 @@ td {
     border: 1px solid #ddd;
 }
 
-/* projetos.html */
+table tbody tr:nth-child(even) td {
+    background: #313131;
+}
+table tbody tr:hover td {
+    background: #414141;
+    cursor: pointer;
+}
+
+/* Seleção para Lista ou Tabela */
 label {
     display: block;
 }
