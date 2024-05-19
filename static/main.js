@@ -54,6 +54,10 @@ document.addEventListener("DOMContentLoaded", function() {
             <li class="texto"><a target="_blank" href="https://scaique.github.io/IntensivaoJavaScript/" class="texto-link">GitHub Pages</a></li>
         </ul>
     </li>
+
+    <li>
+        <p class="texto"><a target="_blank" href="https://github.com/scaique/automacao-vendas/" class="texto-link">Automação de Registro de Vendas</a></p>
+    </li>
 </ul>`;
 
     const conteudo2 = `<table>
@@ -106,6 +110,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 <a target="_blank" href="https://github.com/scaique/IntensivaoJavaScript/" class="texto-link">- GitHub</a><br>
                 <a target="_blank" href="https://scaique.github.io/IntensivaoJavaScript/" class="texto-link">- GitHub Pages</a>
             </td>
+        </tr>
+        <tr>
+            <td>Automação de Registro de Vendas</td>
+            <td>IDX Project</td>
+            <td><a target="_blank" href="https://github.com/scaique/automacao-vendas/" class="texto-link">GitHub</a></td>
         </tr>
     </tbody>
 </table>`;
