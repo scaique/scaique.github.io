@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </li>
 
     <li>
-        <p class="texto"><a target="_blank" href="https://github.com/scaique/automacao-vendas/" class="texto-link">Automação de Registro de Vendas</a></p>
+        <p class="texto"><a target="_blank" href="https://github.com/scaique/automacao-vendas/" class="texto-link">Automação de Registro de Vendas 🆕</a></p>
     </li>
 </ul>`;
 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </td>
         </tr>
         <tr>
-            <td>Automação de Registro de Vendas</td>
+            <td>Automação de Registro de Vendas 🆕</td>
             <td>IDX Project</td>
             <td><a target="_blank" href="https://github.com/scaique/automacao-vendas/" class="texto-link">GitHub</a></td>
         </tr>
