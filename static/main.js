@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <tr>
             <td>Aplicação de Registro de Vendas 🆕</td>
             <td>IDX Project</td>
-            <td><a target="_blank" href="https://www.linkedin.com/posts/sergio-caique-da-silva_python-flask-web-activity-7199179513845432321-eku2/?utm_source=share" class="texto-link">GitHub</a></td>
+            <td><a target="_blank" href="https://www.linkedin.com/posts/sergio-caique-da-silva_python-flask-web-activity-7199179513845432321-eku2/?utm_source=share" class="texto-link">LinkedIn</a></td>
         </tr>
     </tbody>
 </table>`;
