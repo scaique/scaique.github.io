@@ -58,6 +58,14 @@ document.addEventListener("DOMContentLoaded", function() {
     <li>
         <p class="texto"><a target="_blank" href="https://www.linkedin.com/posts/sergio-caique-da-silva_python-flask-web-activity-7199179513845432321-eku2/?utm_source=share" class="texto-link">Aplicação de Registro de Vendas 🆕</a></p>
     </li>
+
+    <li>
+        <p style="color: #007bff;" class="texto">Calculadora de Notas - Faculdade Impacta 🆕</p>
+        <ul style="list-style-type: disc;">
+            <li class="texto"><a target="_blank" href="https://github.com/scaique/calculadora-notas/" class="texto-link">GitHub</a></li>
+            <li class="texto"><a target="_blank" href="https://scaique.github.io/calculadora-notas/" class="texto-link">GitHub Pages</a></li>
+        </ul>
+    </li>
 </ul>`;
 
     const conteudo2 = `<table>
@@ -115,6 +123,14 @@ document.addEventListener("DOMContentLoaded", function() {
             <td>Aplicação de Registro de Vendas 🆕</td>
             <td>IDX Project</td>
             <td><a target="_blank" href="https://www.linkedin.com/posts/sergio-caique-da-silva_python-flask-web-activity-7199179513845432321-eku2/?utm_source=share" class="texto-link">LinkedIn</a></td>
+        </tr>
+        <tr>
+            <td>Calculadora de Notas - Faculdade Impacta 🆕</td>
+            <td>IDX Project</td>
+            <td>
+                <a target="_blank" href="https://github.com/scaique/calculadora-notas/" class="texto-link">- GitHub</a><br>
+                <a target="_blank" href="https://scaique.github.io/calculadora-notas/" class="texto-link">- GitHub Pages</a>
+            </td>
         </tr>
     </tbody>
 </table>`;
