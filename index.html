@@ -3,58 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <link rel="stylesheet" href="static/style.css">
+    <title>Caique Silva | Backend Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            transition: top 0.5s;
+        }
+        .navbar-hidden {
+            top: -45px;
+        }
+        .active {
+            color: #1d4ed8;
+        }
+    </style>
 </head>
-<body>
-    <div>
-        <nav class="navbar">
-            <!-- <input class="btn" type="button" value="Inicio" onclick="pagina('index')"> -->
-            <input class="btn" type="button" value="Projetos" onclick="pagina('projetos')">
-            <input class="btn" type="button" value="Links" onclick="pagina('links')">
-        </nav>
+<body class="font-mono bg-gray-900 m-0 p-0">
+    <!-- Home Section -->
+    <div id="home" class="min-h-screen flex flex-col items-center justify-center text-center text-sm font-medium text-white">
+        <h1 class="text-3xl">Olá, eu sou <span class="text-blue-800">Caique</span>.</h1>
+        <h1 class="text-3xl">Eu sou um desenvolvedor backend.</h1>
+        <a href="#about">
+            <div class="text-xl border-4 border-white text-white mt-5 py-2 px-4 rounded hover:border-gray-900 hover:bg-blue-800 transition duration-300">
+                Veja meu trabalho 
+            </div>
+        </a>
     </div>
-    <div>
-        <h1 style="font-size: 24px;">Olá, sou o Sergio Caique</h1><br>
-        <h2 class="titulo">👨🏽‍🎓 Perfil Acadêmico</h2>
-        <p class="texto">Graduando em ADS na <a class="texto-link" target="_blank" href="https://www.impacta.edu.br/">Faculdade Impacta</a> e aluno da <a class="texto-link" target="_blank" href="https://www.alura.com.br/">Alura</a> determinado a encontrar oportunidades que me permitam aprimorar minhas habilidades como desenvolvedor backend.</p>
-        <br>
-        <h2 class="titulo">👔 Perfil Profissional</h2>
-        <p class="texto">Profissional comprometido e comunicativo, busco contribuir ativamente para o sucesso da empresa, aplicando minha experiência e conhecimentos. Sou responsável, concentrado e colaborativo, promovendo uma interação eficaz em equipe para alcançar os objetivos propostos. Estou sempre em busca de novos desafios no dinâmico mercado da tecnologia.</p>
-        <br>
-        <h2 class="titulo">⚙️ Skills</h2><br>
-        <div class="skills">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=python">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=flask">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=postman">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=git">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=github">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=vscode">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=docker">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=pycharm">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=html">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=css">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=java">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=kotlin">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=androidstudio">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=dart">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=flutter">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=net">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=javascript">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=spring">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=mysql">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=blender">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=unity">
-            <img class="icon-skills" src="https://skillicons.dev/icons?i=gamemakerstudio">
-        </div><br><br>
-        <h2 class="titulo">📈 GitHub Status</h2>
-        <br>
-        <div>
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=scaique&title_color=cdd9e5&text_color=cdd9e5&bg_color=22272e&hide_border=false" style="width:225px">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="mt-[150vh] bg-black py-2">
+        <ul class="flex justify-around space-x-4 text-white text-lg">
+            <li class="hover:text-blue-500 cursor-pointer"><a href="#home" data-section="home" class="nav-item">Inicio</a></li>
+            <li class="hover:text-blue-500 cursor-pointer"><a href="#about" data-section="about" class="nav-item">Sobre</a></li>
+            <li class="hover:text-blue-500 cursor-pointer"><a href="#projects" data-section="projects" class="nav-item">Projetos</a></li>
+            <li class="hover:text-blue-500 cursor-pointer"><a href="#contact" data-section="contact" class="nav-item">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <div id="about" class="min-h-screen py-32 px-8 text-white bg-gray-800">
+        <h1 class="text-3xl mb-4">Sobre</h1>
+        <p class="text-justify text-lg">
+            Como desenvolvedor backend em início de carreira, estou constantemente buscando expandir meus conhecimentos em tecnologias web, especialmente JavaScript e Python. Tenho experiência na criação de soluções eficazes, como sistemas de controle de vendas e ferramentas de automação, além de projetos inovadores, como um Video Downloader e um site para monitorar seguidores na rede social 
+            <span class="text-blue-600 inline-flex items-center">
+                <a href="https://bsky.app/" class="flex items-center">
+                    Bluesky 
+                    <img class="w-4 h-4 ml-1" src="https://docs.bsky.app/img/favicon.png" alt="Bluesky">
+                </a>
+            </span>. Meu objetivo é continuar evoluindo na área de desenvolvimento, aplicando criatividade e lógica para enfrentar novos desafios e aprimorar minhas habilidades.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=python" alt="Python">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=flask" alt="Flask">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=git" alt="Git">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=docker" alt="Docker">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=html" alt="HTML">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=css" alt="CSS">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=kotlin" alt="Kotlin">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=androidstudio" alt="Android Studio">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=net" alt=".NET">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=blender" alt="Blender">
+            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=unity" alt="Unity">
         </div>
     </div>
 
-    <script src="static/main.js"></script>
+    <!-- Projects Section -->
+    <div id="projects" class="min-h-screen py-16 px-8 bg-gray-800 text-white">
+        <h1 class="text-3xl mb-8">Projetos</h1>
+        <div class="grid grid-cols-1 gap-8">
+            <div class="flex justify-start">
+                <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-semibold mb-4">Confront Space</h2>
+                    <p>Aplicação para automatizar o registro e controle de vendas de estabelecimentos. A solução registra vendas em uma planilha Excel, categorizando por forma de pagamento, calculando totais diários e mensais, e registrando troco e retiradas de dinheiro.</p>
+                    <div class="flex gap-4">
+                        <a href="https://blue-games-oficial.itch.io/confront-space/" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition duration-300">Itch.io</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-end">
+                <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-semibold mb-4">Confront Space Mobile</h2>
+                    <p>Aplicação para automatizar o registro e controle de vendas de estabelecimentos. A solução registra vendas em uma planilha Excel, categorizando por forma de pagamento, calculando totais diários e mensais, e registrando troco e retiradas de dinheiro.</p>
+                    <div class="flex gap-4">
+                        <a href="https://gamejolt.com/games/confrontspacemobile/500906/" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Gamejolt</a>                    
+                        <a href="https://blue-games-oficial.itch.io/confront-space-mobile/" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition duration-300">Itch.io</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-start">
+                <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-semibold mb-4">Apliação de Registro e Controle de Vendas</h2>
+                    <p>Aplicação para automatizar o registro e controle de vendas de estabelecimentos. A solução registra vendas em uma planilha Excel, categorizando por forma de pagamento, calculando totais diários e mensais, e registrando troco e retiradas de dinheiro.</p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/scaique/aplicacao-vendas" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition duration-300">Saiba Mais</a>
+                    </div>
+                </div>
+                <!-- <img src="./images/aplicação-vendas.png" alt="Aplicação de Registro e Controle de Vendas" class="w-60 h-60 object-cover rounded-lg shadow-lg"> -->
+            </div>
+    
+            <div class="flex justify-end">
+                <!-- <img src="./images/unf-bsky.png" alt="Aplicação de Registro e Controle de Vendas" class="w-60 h-60 object-cover rounded-lg shadow-lg"> -->
+                <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-semibold mb-4">Unfollowers for Bluesky</h2>
+                    <p>Unfollowers for Bluesky é uma aplicação web intuitiva que identifica usuários que não seguem de volta um determinado perfil na rede social Bluesky. Com uma interface simples, basta pesquisar pelo nome de usuário desejado, selecioná-lo e a plataforma exibirá rapidamente a lista de não-seguidores.</p>
+                    <div class="flex gap-4">
+                        <a href="https://bit.ly/unf-bsky" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Visitar Site</a>
+                        <a href="https://github.com/scaique/unfollowers-bluesky" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition duration-300">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flex justify-start">
+                <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-semibold mb-4">Video Downloader for Bluesky</h2>
+                    <p>BlueSky Video Downloader é uma aplicação web intuitiva que facilita a conversão de vídeos da BlueSky do formato M3U8 para MP4. Com uma interface simples, basta inserir o link do post para realizar a conversão e baixar o vídeo diretamente. Desenvolvido em parceria com Matheus Martins, o projeto utiliza PHP, FFmpeg e Tailwind CSS para garantir uma experiência fluida e moderna.</p>
+                    <div class="flex gap-4">
+                        <a href="https://bit.ly/video-bsky" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Visitar Site</a>
+                        <a href="https://github.com/calebhphp/bsky-video-downloader" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition duration-300">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="min-h-screen py-16 px-8 bg-gray-800 text-white">
+        <h1 class="text-3xl mb-8">Contato</h1>
+        <div class="mt-8 flex flex-wrap justify-start gap-4">
+            <a href="https://github.com/scaique" class="flex items-center" target="_blank">
+                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-12 h-12">
+            </a>
+            <a href="https://www.linkedin.com/in/sergio-caique-da-silva" class="flex items-center" target="_blank">
+                <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" class="w-12 h-12">
+            </a>
+            <a href="mailto:scaique080@gmail.com" class="flex items-center">
+                <img src="https://skillicons.dev/icons?i=gmail" alt="Email" class="w-12 h-12">
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4 text-center">
+        <p class="text-sm text-gray-400">&copy; <span id="year"></span> Caique Silva</p>
+    </footer>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        const navbar = document.getElementById('navbar');
+        const navbarOffsetTop = navbar.offsetTop;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= navbarOffsetTop) {
+                navbar.classList.add('navbar-fixed');
+                navbar.classList.remove('navbar-hidden');
+            } else {
+                navbar.classList.remove('navbar-fixed');
+                navbar.classList.add('navbar-hidden');
+            }
+
+            highlightSectionInView();
+        });
+
+        function highlightSectionInView() {
+            const sections = document.querySelectorAll('div[id]');
+            const navItems = document.querySelectorAll('.nav-item');
+
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop - 50 && window.scrollY < sectionTop + sectionHeight - 50) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-section') === currentSection) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // Smooth scroll to sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
