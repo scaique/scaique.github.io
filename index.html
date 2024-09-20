@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caique Silva | Backend Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
         .navbar-fixed {
             position: fixed;
             top: 0;
@@ -22,29 +18,29 @@
             top: -45px;
         }
         .active {
-            color: #1d4ed8;
+            color: rgb(29 78 216);
         }
     </style>
 </head>
 <body class="font-mono bg-gray-900 m-0 p-0">
     <!-- Home Section -->
     <div id="home" class="min-h-screen flex flex-col items-center justify-center text-center text-sm font-medium text-white">
-        <h1 class="text-3xl">Olá, eu sou <span class="text-blue-800">Caique</span>.</h1>
-        <h1 class="text-3xl">Eu sou um desenvolvedor backend.</h1>
+        <h1 class="text-2xl">Olá, eu sou <span class="text-blue-700">Caique</span>.</h1>
+        <h1 class="text-xl">Eu sou um desenvolvedor backend.</h1>
         <a href="#about">
-            <div class="text-xl border-4 border-white text-white mt-5 py-2 px-4 rounded hover:border-gray-900 hover:bg-blue-800 transition duration-300">
+            <div class="text-xl border-4 border-white text-white mt-5 py-2 px-4 rounded hover:border-gray-900 hover:bg-blue-800 focus:outline-none transition duration-300">
                 Veja meu trabalho 
             </div>
         </a>
     </div>
 
     <!-- Navbar -->
-    <nav id="navbar" class="mt-[150vh] bg-black py-2">
+    <nav id="navbar" class="mt-[150vh] bg-gray-900 py-2">
         <ul class="flex justify-around space-x-4 text-white text-lg">
-            <li class="cursor-pointer"><a href="#home" data-section="home" class="nav-item">Inicio</a></li>
-            <li class="cursor-pointer"><a href="#about" data-section="about" class="nav-item">Sobre</a></li>
-            <li class="cursor-pointer"><a href="#projects" data-section="projects" class="nav-item">Projetos</a></li>
-            <li class="cursor-pointer"><a href="#contact" data-section="contact" class="nav-item">Contato</a></li>
+            <li class="cursor-pointer"><a href="#home" data-section="home" class="nav-item hover:text-gray-400 focus:outline-none">Inicio</a></li>
+            <li class="cursor-pointer"><a href="#about" data-section="about" class="nav-item hover:text-gray-400 focus:outline-none">Sobre</a></li>
+            <li class="cursor-pointer"><a href="#projects" data-section="projects" class="nav-item hover:text-gray-400 focus:outline-none">Projetos</a></li>
+            <li class="cursor-pointer"><a href="#contact" data-section="contact" class="nav-item hover:text-gray-400 focus:outline-none">Contato</a></li>
         </ul>
     </nav>
 
@@ -61,16 +57,16 @@
             </span>. Meu objetivo é continuar evoluindo na área de desenvolvimento, aplicando criatividade e lógica para enfrentar novos desafios e aprimorar minhas habilidades.
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=python" alt="Python">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=flask" alt="Flask">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=git" alt="Git">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=html" alt="HTML">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=css" alt="CSS">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=blender" alt="Blender">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=cs" alt="C#">
-            <img class="icon-skills w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=unity" alt="Unity">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=python" alt="Python">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=flask" alt="Flask">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=git" alt="Git">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=html" alt="HTML">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=css" alt="CSS">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=blender" alt="Blender">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=cs" alt="C#">
+            <img class="w-12 h-12 p-1.5 border-4 border-blue-900 border-double" src="https://skillicons.dev/icons?i=unity" alt="Unity">
         </div>
     </div>
 
@@ -83,9 +79,9 @@
                     <h2 class="text-xl font-semibold mb-4">Confront Space Mobile</h2>
                     <p>Confront Space Mobile é um jogo 3D que oferece uma experiência arcade cheia de ação e adrenalina. Com jogabilidade fluida e combates desafiadores, o jogador deve eliminar ondas de inimigos em cenários dinâmicos. Desenvolvido por mim, o jogo exige foco e estratégia para avançar, garantindo uma experiência envolvente e desafiadora a cada fase. Prepare-se para testar suas habilidades em batalhas eletrizantes e explorar um universo repleto de perigos.</p>
                     <div class="flex gap-4 justify-start mt-2">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=cs" alt="C#">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=unity" alt="Unity">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=blender" alt="Blender">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=cs" alt="C#">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=unity" alt="Unity">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=blender" alt="Blender">
                     </div>
                     <div class="flex gap-4 mt-4">
                         <a href="https://gamejolt.com/games/confrontspacemobile/500906/" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Gamejolt</a>                    
@@ -99,11 +95,11 @@
                     <h2 class="text-xl font-semibold mb-4">Aplicação de Registro e Controle de Vendas</h2>
                     <p>Aplicação para automatizar o registro e controle de vendas de estabelecimentos. A solução registra vendas em uma planilha Excel, categorizando por forma de pagamento, calculando totais diários e mensais, e registrando troco e retiradas de dinheiro.</p>
                     <div class="flex gap-4 justify-start mt-2">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=python" alt="Python">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=flask" alt="Flask">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=html" alt="HTML">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=css" alt="CSS">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Git">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=python" alt="Python">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=flask" alt="Flask">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=html" alt="HTML">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=css" alt="CSS">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Git">
                     </div>
                     <div class="flex gap-4 mt-4">
                         <a href="https://github.com/scaique/aplicacao-vendas" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition duration-300">Saiba Mais</a>
@@ -118,10 +114,10 @@
                     <h2 class="text-xl font-semibold mb-4">Unfollowers for Bluesky</h2>
                     <p>Unfollowers for Bluesky é uma aplicação web intuitiva que identifica usuários que não seguem de volta um determinado perfil na rede social Bluesky. Com uma interface simples, basta pesquisar pelo nome de usuário desejado, selecioná-lo e a plataforma exibirá rapidamente a lista de não-seguidores.</p>
                     <div class="flex gap-4 justify-start mt-2">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=html" alt="HTML">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Git">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=html" alt="HTML">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Git">
                     </div>
                     <div class="flex gap-4 mt-4">
                         <a href="https://bit.ly/unf-bsky" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Visitar Site</a>
@@ -133,13 +129,13 @@
             <div class="flex justify-end">
                 <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
                     <h2 class="text-xl font-semibold mb-4">Video Downloader for Bluesky</h2>
-                    <p>BlueSky Video Downloader é uma aplicação web intuitiva que facilita a conversão de vídeos da BlueSky do formato M3U8 para MP4. Com uma interface simples, basta inserir o link do post para realizar a conversão e baixar o vídeo diretamente. Desenvolvido em parceria com Matheus Martins, o projeto utiliza PHP, FFmpeg e Tailwind CSS para garantir uma experiência fluida e moderna.</p>
+                    <p>Bluesky Video Downloader é uma aplicação web intuitiva que facilita a conversão de vídeos da Bluesky do formato M3U8 para MP4. Com uma interface simples, basta inserir o link do post para realizar a conversão e baixar o vídeo diretamente. Desenvolvido em parceria com Matheus Martins, o projeto utiliza PHP, FFmpeg e Tailwind CSS para garantir uma experiência fluida e moderna.</p>
                     <div class="flex gap-4 justify-start mt-2">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=php" alt="PHP">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Git">
-                        <img class="icon-skills w-8 h-8" src="https://skillicons.dev/icons?i=aws" alt="AWS">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=php" alt="PHP">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Git">
+                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=aws" alt="AWS">
                     </div>
                     <div class="flex gap-4 mt-4">
                         <a href="https://bit.ly/video-bsky" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Visitar Site</a>
@@ -154,14 +150,14 @@
     <div id="contact" class="min-h-screen py-16 px-8 bg-gray-800 text-white">
         <h1 class="text-3xl mb-8">Contato</h1>
         <div class="mt-8 flex flex-wrap justify-start gap-4">
-            <a href="https://github.com/scaique" class="flex items-center" target="_blank">
-                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-12 h-12">
+            <a href="https://github.com/scaique" target="_blank">
+                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-10 h-10">
             </a>
-            <a href="https://www.linkedin.com/in/sergio-caique-da-silva" class="flex items-center" target="_blank">
-                <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="LinkedIn" class="w-12 h-12">
+            <a href="https://www.linkedin.com/in/sergio-caique-da-silva" target="_blank">
+                <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" class="w-10 h-10">
             </a>
-            <a href="mailto:scaique080@gmail.com" class="flex items-center">
-                <img src="https://skillicons.dev/icons?i=gmail" alt="Email" class="w-12 h-12">
+            <a href="mailto:scaique080@gmail.com">
+                <img src="https://skillicons.dev/icons?i=gmail" alt="Email" class="w-10 h-10">
             </a>
         </div>
     </div>
