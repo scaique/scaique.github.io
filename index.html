@@ -13,10 +13,10 @@
     <meta property="og:url" content="https://scaique.tech">
     <meta property="og:type" content="website">
     
-    <link rel="icon" href="./images/favicon.png" type="image/icon">
+    <link rel="icon" href="./images/icon.png" type="image/icon">
     
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.rel='stylesheet'">
 
     <title>Caique Silva | Backend Developer</title>
     <style>
@@ -216,6 +216,11 @@
     </footer>
     
     <script>
+        window.onload = function() {
+          if (window.location.href === "https://scaique.github.io/") {
+            window.location.href = "https://scaique.tech/";
+          }
+        }
         // Atualiza o ano no footer
         document.getElementById('year').textContent = new Date().getFullYear();
         
