@@ -2,24 +2,28 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Me chamo Caique Silva, desenvolvedor backend especializado em criar soluções eficientes e escaláveis. Explore meus projetos.">
-    <meta name="keywords" content="Portfolio, CV, Curriculo, Resume, Projetos, Backend, Desenvolvedor, Developer, Programação">
+    <meta name="keywords" content="Portfolio, CV, Curriculo, Resume, Projetos, Backend, Desenvolvedor, Developer, Programação, scaique, Caique Silva">
     <meta name="author" content="Caique Silva">
 
     <meta property="og:title" content="Caique Silva | Backend Developer">
     <meta property="og:description" content="Desenvolvedor backend especializado em criar soluções eficientes e escaláveis. Explore meus projetos.">
-    <meta property="og:image" content="https://fontawesome.com/social/portrait?f=classic&s=&v=5">
+    <meta property="og:image" content="./images/og-image.png">
     <meta property="og:url" content="https://scaique.tech">
     <meta property="og:type" content="website">
     
     <link rel="icon" href="./images/icon.png" type="image/icon">
     
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.rel='stylesheet'">
 
     <title>Caique Silva | Backend Developer</title>
     <style>
+        /* Configuração e Animação da NavBar */
         .navbar-fixed {
             position: fixed;
             top: 0;
@@ -52,11 +56,11 @@
         .active {
             color: rgb(29 78 216);
         }
-        .animate-bounce {
-            animation: bounce 1s infinite;
+        .animate-jumps {
+            animation: jumps 1s infinite;
         }
 
-        @keyframes bounce {
+        @keyframes jumps {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
             }
@@ -67,14 +71,41 @@
                 transform: translateY(-5px);
             }
         }
+
+        /* Configuração e Animação dos Projetos */
+        .project {
+            opacity: 0;
+            transform: translateX(100%);
+            transition: opacity 0.5s, transform 1s;
+        }
+        .project.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .project.right {
+            transform: translateX(-100%);
+        }
+        .project.right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .project.skills {
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.5s, transform 1s;
+        }
+        .project.skills.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
     </style>
 </head>
-<body class="font-mono bg-gray-900 m-0 p-0">
+<body class="font-mono bg-gray-900 m-0 p-0 w-full">
     <!-- Home Section -->
     <div id="home" class="min-h-screen flex flex-col items-center justify-center text-center text-sm font-medium text-white">
         <h1 class="text-2xl">Oi, <span class="text-blue-700">Caique</span> aqui!</h1>
         <h1 class="text-xl">Sou um desenvolvedor backend.</h1>
-        <div class="mt-5 animate-bounce">
+        <div class="mt-5 animate-jumps">
             <a href="#about">
                 <div class="flex flex-col items-center text-xl text-white mt-5 px-4 rounded hover:bg-gray-800 focus:outline-none transition duration-300">
                     Veja meu trabalho 
@@ -107,31 +138,31 @@
             </span>. Meu objetivo é continuar evoluindo na área de desenvolvimento, aplicando criatividade e lógica para enfrentar novos desafios e aprimorar minhas habilidades.
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=javascript" alt="Icone da linguagem de programação: JavaScript" loading="lazy">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=python" alt="Icone da linguagem de programação: Python" loading="lazy">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=flask" alt="Icone do framework: Flask" loading="lazy">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=git" alt="Icone do sistema de controle de versão: Git" loading="lazy">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=html" alt="Icone da linguagem de marcação: HTML" loading="lazy">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=css" alt="Icone da linguagem de estilização: CSS" loading="lazy">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=tailwind" alt="Icone do framework: Tailwind CSS" loading="lazy">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=unity" alt="Icone do motor de jogos: Unity Engine" loading="lazy">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=cs" alt="Icone da linguagem de programação: C#" loading="lazy">
-            <img class="w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=blender" alt="Icone do programa de modelagem 3D: Blender" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=javascript" alt="Icone da linguagem de programação: JavaScript" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=python" alt="Icone da linguagem de programação: Python" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=flask" alt="Icone do framework: Flask" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=git" alt="Icone do sistema de controle de versão: Git" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=html" alt="Icone da linguagem de marcação: HTML" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=css" alt="Icone da linguagem de estilização: CSS" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=tailwind" alt="Icone do framework: Tailwind CSS" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=unity" alt="Icone do motor de jogos: Unity Engine" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=cs" alt="Icone da linguagem de programação: C#" loading="lazy">
+            <img class="project skills w-12 h-12 p-1.5" src="https://skillicons.dev/icons?i=blender" alt="Icone do programa de modelagem 3D: Blender" loading="lazy">
         </div>
     </div>
 
     <!-- Projects Section -->
-    <div id="projects" class="min-h-screen py-16 px-8 bg-gray-800 text-white">
+    <div id="projects" class="min-h-screen py-16 px-8 bg-gray-800 text-white overflow-x-hidden">
         <h1 class="text-3xl mb-8">Projetos</h1>
         <div class="grid grid-cols-1 gap-8">
             <div class="flex justify-start">
-                <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="project w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
                     <h2 class="text-xl font-semibold mb-4">Confront Space Mobile</h2>
                     <p>Confront Space Mobile é um jogo 3D que oferece uma experiência arcade cheia de ação e adrenalina. Com jogabilidade fluida e combates desafiadores, o jogador deve eliminar ondas de inimigos em cenários dinâmicos. Desenvolvido por mim, o jogo exige foco e estratégia para avançar, garantindo uma experiência envolvente e desafiadora a cada fase. Prepare-se para testar suas habilidades em batalhas eletrizantes e explorar um universo repleto de perigos.</p>
                     <div class="flex gap-4 justify-start mt-2">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=unity" alt="Icone do motor de jogos: Unity Engine" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=cs" alt="Icone da linguagem de programação: C#" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=blender" alt="Icone do programa de modelagem 3D: Blender" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=unity" alt="Icone do motor de jogos: Unity Engine" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=cs" alt="Icone da linguagem de programação: C#" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=blender" alt="Icone do programa de modelagem 3D: Blender" loading="lazy">
                     </div>
                     <div class="flex gap-4 mt-4">
                         <a href="https://gamejolt.com/games/confrontspacemobile/500906/" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Gamejolt</a>                    
@@ -141,15 +172,15 @@
             </div>
 
             <div class="flex justify-end">
-                <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="project right w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
                     <h2 class="text-xl font-semibold mb-4">Aplicação de Registro e Controle de Vendas</h2>
                     <p>Aplicação para automatizar o registro e controle de vendas de estabelecimentos. A solução registra vendas em uma planilha Excel, categorizando por forma de pagamento, calculando totais diários e mensais, e registrando troco e retiradas de dinheiro.</p>
                     <div class="flex gap-4 justify-start mt-2">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=python" alt="Icone da linguagem de programação: Python" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=flask" alt="Icone do framework: Flask" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=html" alt="Icone da linguagem de marcação: HTML" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=css" alt="Icone da linguagem de estilização: CSS" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Icone do sistema de controle de versão: Git" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=python" alt="Icone da linguagem de programação: Python" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=flask" alt="Icone do framework: Flask" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=html" alt="Icone da linguagem de marcação: HTML" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=css" alt="Icone da linguagem de estilização: CSS" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Icone do sistema de controle de versão: Git" loading="lazy">
                     </div>
                     <div class="flex gap-4 mt-4">
                         <a href="https://github.com/scaique/aplicacao-vendas" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition duration-300">Saiba Mais</a>
@@ -158,14 +189,14 @@
             </div>
     
             <div class="flex justify-start">
-                <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="project w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
                     <h2 class="text-xl font-semibold mb-4">Unfollowers for Bluesky</h2>
                     <p>Unfollowers for Bluesky é uma aplicação web intuitiva que identifica usuários que não seguem de volta um determinado perfil na rede social Bluesky. Com uma interface simples, basta pesquisar pelo nome de usuário desejado, selecioná-lo e a plataforma exibirá rapidamente a lista de não-seguidores.</p>
                     <div class="flex gap-4 justify-start mt-2">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=javascript" alt="Icone da linguagem de programação: JavaScript" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=html" alt="Icone da linguagem de marcação: HTML" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=tailwind" alt="Icone do framework Tailwind: CSS" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Icone do sistema de controle de versão: Git" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=javascript" alt="Icone da linguagem de programação: JavaScript" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=html" alt="Icone da linguagem de marcação: HTML" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=tailwind" alt="Icone do framework Tailwind: CSS" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Icone do sistema de controle de versão: Git" loading="lazy">
                     </div>
                     <div class="flex gap-4 mt-4">
                         <a href="https://bit.ly/unf-bsky" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Visitar Site</a>
@@ -175,15 +206,15 @@
             </div>
     
             <div class="flex justify-end">
-                <div class="w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="project right w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
                     <h2 class="text-xl font-semibold mb-4">Video Downloader for Bluesky</h2>
                     <p>Bluesky Video Downloader é uma aplicação web intuitiva que facilita a conversão de vídeos da Bluesky do formato M3U8 para MP4. Com uma interface simples, basta inserir o link do post para realizar a conversão e baixar o vídeo diretamente. Desenvolvido em parceria com Matheus Martins, o projeto utiliza PHP, FFmpeg e Tailwind CSS para garantir uma experiência fluida e moderna.</p>
                     <div class="flex gap-4 justify-start mt-2">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=php" alt="Icone da linguagem de programação: PHP" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=javascript" alt="Icone da linguagem de programação: JavaScript" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=tailwind" alt="Icone do framework Tailwind: CSS" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Icone do sistema de controle de versão: Git" loading="lazy">
-                        <img class="w-8 h-8" src="https://skillicons.dev/icons?i=aws" alt="Icone do serviço de armazenamento em nuvem: AWS" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=php" alt="Icone da linguagem de programação: PHP" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=javascript" alt="Icone da linguagem de programação: JavaScript" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=tailwind" alt="Icone do framework Tailwind: CSS" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=git" alt="Icone do sistema de controle de versão: Git" loading="lazy">
+                        <img class="project skills w-8 h-8" src="https://skillicons.dev/icons?i=aws" alt="Icone do serviço de armazenamento em nuvem: AWS" loading="lazy">
                     </div>
                     <div class="flex gap-4 mt-4">
                         <a href="https://bit.ly/video-bsky" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Visitar Site</a>
@@ -205,7 +236,7 @@
                 <i class="fab fa-linkedin fa-2xl"></i>
             </a>
             <a href="mailto:scaique080@gmail.com" class="text-gray-400 hover:text-blue-300">
-                <i class="fab fa-solid fa-envelope fa-2xl"></i>
+                <i class="fas fa-envelope fa-2xl"></i>
             </a>
         </div>
     </div>
@@ -217,14 +248,15 @@
     
     <script>
         window.onload = function() {
-          if (window.location.href === "https://scaique.github.io/") {
-            window.location.href = "https://scaique.tech/";
-          }
+            if (window.location.href === "https://scaique.github.io/") {
+                window.location.href = "https://scaique.tech/";
+            }
         }
+        
         // Atualiza o ano no footer
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Configuração da animação do navbar
+        // Configuração da animação com scroll
         const navbar = document.getElementById('navbar');
         const navbarOffsetTop = navbar.offsetTop;
 
@@ -238,6 +270,7 @@
             }
 
             highlightSectionInView();
+            animateProjects();
         });
 
         // Função para destacar a seção atual no navbar
@@ -259,6 +292,19 @@
                 item.classList.remove('active');
                 if (item.getAttribute('data-section') === currentSection) {
                     item.classList.add('active');
+                }
+            });
+        }
+
+        // Animação dos projetos
+        function animateProjects() {
+            const projects = document.querySelectorAll('.project');
+            projects.forEach(project => {
+                const rect = project.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    project.classList.add('visible');
+                } else {
+                    project.classList.remove('visible');
                 }
             });
         }
