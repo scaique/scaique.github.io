@@ -46,7 +46,7 @@
             bottom: 0;
             width: 100%;
             height: 2px;
-            background-color: rgb(29 78 216);
+            background-color: rgb(37 99 235);
             transform: scaleX(0);
             transition: transform 1s ease;
         }
@@ -54,7 +54,7 @@
             transform: scaleX(1);
         }
         .active {
-            color: rgb(29 78 216);
+            color: rgb(37 99 235);
         }
         .animate-jumps {
             animation: jumps 1s infinite;
@@ -98,16 +98,32 @@
             opacity: 1;
             transform: scale(1);
         }
+
+        .typing {
+            border-right: 2px solid white; /* Estilo do cursor de digitação */
+            white-space: nowrap; /* Impede quebras de linha */
+            overflow: hidden; /* Esconde o texto que ainda não foi "digitado" */
+            animation: blink-caret 0.75s step-end infinite; /* Animação do cursor piscante */
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
     </style>
 </head>
 <body class="font-mono bg-gray-900 m-0 p-0 w-full">
     <!-- Home Section -->
     <div id="home" class="min-h-screen flex flex-col items-center justify-center text-center text-sm font-medium text-white">
-        <h1 class="text-2xl">Oi, <span class="text-blue-700">Caique</span> aqui!</h1>
-        <h1 class="text-xl">Sou um desenvolvedor backend.</h1>
+        <div>
+            <span id="typing1" class="text-2xl"></span>
+            <span id="typing2" class="text-2xl text-blue-600"></span>
+            <span id="typing3" class="text-2xl"></span>
+        </div>
+        <span id="typing4" class="text-xl"></span>
         <div class="mt-5 animate-jumps">
             <a href="#about">
-                <div class="flex flex-col items-center text-xl text-white mt-5 px-4 rounded hover:bg-gray-800 focus:outline-none transition duration-300">
+                <div id="typing3" class="flex flex-col items-center text-xl text-white mt-5 px-4 rounded hover:bg-gray-800 focus:outline-none transition duration-300">
                     Veja meu trabalho 
                     <i class="fa-solid fa-arrow-down"></i>
                 </div>
@@ -246,17 +262,58 @@
         <p class="text-sm text-gray-400">&copy; <span id="year"></span> Caique Silva</p>
     </footer>
     
+    <!-- Redirecionamento -->
     <script>
         window.onload = function() {
             if (window.location.href === "https://scaique.github.io/") {
                 window.location.href = "https://scaique.tech/";
             }
         }
-        
-        // Atualiza o ano no footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Configuração da animação com scroll
+    </script>
+
+    <!-- Animação de digitação -->
+    <script>
+        window.onload = function() {
+            typeWriterEffect("Oi, ", "typing1", 100, function () {
+                typeWriterEffect("Caique", "typing2", 100, function () {
+                    typeWriterEffect(" aqui!", "typing3", 100, function () {
+                        typeWriterEffect("Sou um desenvolvedor backend.", "typing4", 100, function () {});
+                    });
+                });
+            });
+        }
+
+        function typeWriterEffect(text, elemento, vel, callback) {
+            let i = 0;
+            const element = document.getElementById(elemento);
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, vel);
+                } else if (callback) {
+                    callback();
+                }
+            }
+            type();
+        }
+    </script>
+
+    <!-- Adiciona um ouvinte de evento para cada link de navegação -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Configuração da barra de navegação -->
+    <script>
         const navbar = document.getElementById('navbar');
         const navbarOffsetTop = navbar.offsetTop;
 
@@ -270,7 +327,6 @@
             }
 
             highlightSectionInView();
-            animateProjects();
         });
 
         // Função para destacar a seção atual no navbar
@@ -295,8 +351,14 @@
                 }
             });
         }
+    </script>
 
-        // Animação dos projetos
+    <!-- Configuração da animação dos projetos -->
+    <script>
+        window.addEventListener('scroll', () => {
+            animateProjects();
+        });
+    
         function animateProjects() {
             const projects = document.querySelectorAll('.project');
             projects.forEach(project => {
@@ -308,16 +370,11 @@
                 }
             });
         }
-
-        // Adiciona um ouvinte de evento para cada link de navegação
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    </script>
+    
+    <!-- Atualiza o ano no footer -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
